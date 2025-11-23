@@ -10,6 +10,12 @@ How much market-correcting rubberbending force you are applying can be configure
 
 **Notes Below is detailed explanation on how vanilla market work. Ignore that if you are not interested.**
 
+
+
+
+
+
+
 How Market works vanilla ingame afaik:
 Vanilla game have station with semi-constant item consumption rate (depending on population and etc), which produces items in the same rate. This means there is a cap on consumption rate for each and every item. Depending on production cycle, Each item will have either excess production globally or deficit production globally.
 
