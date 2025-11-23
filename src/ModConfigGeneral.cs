@@ -20,7 +20,7 @@ namespace FixEconomy
             this.ModData.AddConfigHeader("STRING:General Settings", "general");
             this.ModData.AddConfigValue("general", "about_final", "STRING:<color=#f51b1b>The game must be restarted after setting then saving this config to take effect.</color>\n");
 
-            this.ModData.AddConfigValue("general", "Price_Ratio_Min", 50, 10, 100, "STRING:Price Ratio Minimum %", "STRING:Minimum possible % value used for consumption multiplier. This number controls rubberbending power when item price is above average. Lower number means stronger rubberbending.");
+            this.ModData.AddConfigValue("general", "Price_Ratio_Min", 30, 10, 100, "STRING:Price Ratio Minimum %", "STRING:Minimum possible % value used for consumption multiplier. This number controls rubberbending power when item price is above average. Lower number means stronger rubberbending.");
             this.ModData.AddConfigValue("general", "Price_Ratio_Max", 1000, 101, 2000, "STRING:Price Ratio Maximum %", "STRING:Maximum possible % value used for consumption multiplier. This number controls rubberbending power when item price is below average. Higher number means stronger rubberbending.");
             this.ModData.AddConfigValue("general", "Price_Ratio_Abs_Adj", 100, 10, 1000, "STRING:Price Adjustment Multiplier %", "STRING:This is % multiplier on arbitrary average price the rubberbending is aiming for. Higher number here makes all market item price higher. ");
 

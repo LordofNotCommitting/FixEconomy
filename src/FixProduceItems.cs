@@ -19,7 +19,7 @@ namespace FixEconomy
     {
 
 
-        static int price_ratio_min = Plugin.ConfigGeneral.ModData.GetConfigValue<int>("Price_Ratio_Min", 50);
+        static int price_ratio_min = Plugin.ConfigGeneral.ModData.GetConfigValue<int>("Price_Ratio_Min", 30);
         static int price_ratio_max = Plugin.ConfigGeneral.ModData.GetConfigValue<int>("Price_Ratio_Max", 1000);
         static int price_ratio_abs_adjustment = Plugin.ConfigGeneral.ModData.GetConfigValue<int>("Price_Ratio_Abs_Adj", 100);
 
@@ -74,24 +74,21 @@ namespace FixEconomy
                         //this contains original price of the item... I think.
                         float abs_price = ((ItemRecord)(Data.Items.GetRecord(itemId, true) as CompositeItemRecord).PrimaryRecord).Price;
 
-                        bool pricechart_exist = Prices.TryGetValue(itemId, out var curr_price);
+                        float curr_price = itemsPrices.GetPrice(itemId);
 
-                        if (pricechart_exist) {
-                            price_ratio = Mathf.Clamp(abs_price / curr_price * temp_abs_adjustment_factor, temp_ratio_min_factor, temp_ratio_max_factor);
-                        }
-                        else
-                        {
-                            curr_price = abs_price;
-                        }
+
+
                         // now we re-adjust consumption rate as per whatever.
 
                         //don't consume less than what we already got, only consume more if ratio allows.
                         int temp_consumption_count = itemQuantity.Count;
                         //if abs_price / curr_price. So when item price is cheaper, consumption increases.
                         // should not decrease consumption if item is expensive. just slow down production cycle.
-                        if (price_ratio > 1)
+                        if (abs_price != curr_price)
                         {
+                            price_ratio = Mathf.Clamp(abs_price / curr_price, temp_ratio_min_factor, temp_ratio_max_factor);
                             temp_consumption_count = (int)Mathf.Floor((float)itemQuantity.Count * price_ratio);
+                            temp_consumption_count = Mathf.Max(temp_consumption_count, 1);
                         }
                         //adjust production speed accordingly
                         //get lowest speed possible.

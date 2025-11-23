@@ -75,7 +75,7 @@ namespace FixEconomy
         [Hook(ModHookType.AfterConfigsLoaded)]
         public static void AfterConfig(IModContext context)
         {
-            Plugin.ConfigGeneral = new ModConfigGeneral("Fix Economy", Plugin.ConfigPath);
+            Plugin.ConfigGeneral = new ModConfigGeneral("Stable Economy", Plugin.ConfigPath);
             Plugin.Save = new ModSave(Plugin.SavePath);
             new Harmony("LoC_" + Plugin.ModAssemblyName).PatchAll();
         }
