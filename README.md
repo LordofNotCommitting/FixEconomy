@@ -42,5 +42,11 @@ Oh, and this should in theory increase non-tez faction power since we just juice
 
 Changelog:
 
+v1.11:
+Changed default setting value.
+Price Ratio Minimum % of 15
+Price Ratio Maximum % of 1000
+Price Adjustment Multiplier % of 100
+
 v1.1:
 It now actually works instead of not working. And few other changes.
