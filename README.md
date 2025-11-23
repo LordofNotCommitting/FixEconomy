@@ -32,6 +32,15 @@ Starting item price / Current item price * Price Adjustment Multiplier % in actu
 If this multiplier is greater than 1 (there are excess items), this multiplier will multiply station item consumption, and decrease production cycle time.
 If this multiplier is lower than 1 (there are in-demand items),it just increase production cycle time.
 
+Tradable Item minimum price now at 10 in order to prevent rock hard crash.
+
+Updated the station price so rise and fall of item price dirrectly corresponds to station stock and demand. lowest price is 50%, highest price is at 200%.
+
 Since stock per station is now controlled and consumption now pegged to starting item price, there are no hard crashes. Rubberbending, how does it work?
 
 Oh, and this should in theory increase non-tez faction power since we just juiced up station production cycles. While I did not notice it during testing, it should be disclosed.
+
+Changelog:
+
+v1.1:
+It now actually works instead of not working. And few other changes.
