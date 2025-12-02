@@ -2,6 +2,8 @@ Quasimorph naturally have either all item price crash or all item price rise for
 
 This mod put rubberbanding on demanded/excess items, and decrease/increase consumption cycle accordingly. This should prevent consistant long game market crashes which has been common ever since market has been a thing. If you want more explanation, it will be commented below.
 
+To counter slower production leading to lower faction growth overall, I have added power/tech gain multiplier on menu. Current defaulting at 300% power/500% tech multiplier to match vanilla pace of tech/power advancement.
+
 How much market-correcting rubberbending force you are applying can be configured on MCM menu, but not really recommending you to touch those if you don't know what you are doing.
 
 **Need to restart the game after MCM config setup for mode change to take effect**
@@ -38,9 +40,11 @@ Updated the station price so rise and fall of item price dirrectly corresponds t
 
 Since stock per station is now controlled and consumption now pegged to starting item price, there are no hard crashes. Rubberbending, how does it work?
 
-Oh, and this should in theory increase non-tez faction power since we just juiced up station production cycles. While I did not notice it during testing, it should be disclosed.
-
 Changelog:
+
+v1.2:
+
+To counter slower production leading to lower faction growth overall, I have added power/tech gain multiplier on menu. Current defaulting at 300% power/500% tech multiplier to match vanilla pace of tech/power advancement.
 
 v1.11:
 Changed default setting value.
