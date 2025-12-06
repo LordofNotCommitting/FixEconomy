@@ -42,6 +42,10 @@ Since stock per station is now controlled and consumption now pegged to starting
 
 Changelog:
 
+
+v1.3:
+Tech gain type error, which has been fixed.
+
 v1.2:
 To counter slower production leading to lower faction growth overall, I have added power/tech gain multiplier on menu. Current defaulting at 300% power/500% tech multiplier to match vanilla pace of tech/power advancement.
 
