@@ -17,13 +17,13 @@ namespace FixEconomy
     [HarmonyPatch(typeof(StationSystem), nameof(StationSystem.GetStationTechGain))]
     public static class MultStationTechGain
     {
-        static int Faction_Prod_TechGain_Mult_Perc = Plugin.ConfigGeneral.ModData.GetConfigValue<int>("Faction_Prod_TechGain_Mult_Perc", 500);
+        static int Faction_Prod_TechGain_Mult_Perc = Plugin.ConfigGeneral.ModData.GetConfigValue<int>("Faction_Prod_TechGain_Mult_Perc", 300);
 
         static float Faction_Prod_TechGain_Mult = (float)Faction_Prod_TechGain_Mult_Perc / 100f;
 
-        public static void Postfix(Station station, Difficulty difficulty, ref int __result)
+        public static void Postfix(Station station, Difficulty difficulty, ref float __result)
         {
-            __result = (int)(__result * Faction_Prod_TechGain_Mult);
+            __result = (__result * Faction_Prod_TechGain_Mult);
         }
 
     }
